@@ -1,0 +1,22 @@
+{
+  "name": "chrome-extension-demo",
+  "description": "A Chrome extension demo",
+  "version": "1.0.0",
+  "icons": {
+    "16": "assets/icon48.png",
+    "48": "assets/icon48.png",
+    "128": "assets/icon48.png"
+  },
+  "action": {
+    "default_title": "Hello World",
+    "default_popup": "index.html"
+  },
+  "content_scripts": [{
+    "matches": [ "<all_urls>" ],
+    "js": ["content.js"]
+  }],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "manifest_version": 3
+}
